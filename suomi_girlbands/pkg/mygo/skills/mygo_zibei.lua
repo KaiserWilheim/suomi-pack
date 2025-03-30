@@ -4,7 +4,7 @@ local zibei = fk.CreateSkill{
 
 local maxcard
 
-zibei:addEffect(fk.GameStart,{
+zibei:addEffect(fk.GameStart, {
     can_trigger =  function (self, event, target, player, data)
         if player:hasSkill(self.name) then maxcard = player:getMaxCards() end
         --print(maxcard)
@@ -27,7 +27,7 @@ local res = {
             player:drawCards(player:getMaxCards() - player:getHandcardNum())
         elseif player:getHandcardNum() > player:getMaxCards() then
             local num = player:getHandcardNum() - player:getMaxCards()
-            room:askForDiscard(player, num, num, false, self.name, false)
+            room:askToDiscard(player, {num, num, false, self.name, false})
         end
         local aim = room:askToChoosePlayers(player, {
             targets = room:getOtherPlayers(player),
@@ -43,7 +43,7 @@ local res = {
         elseif prey:getHandcardNum() > prey:getMaxCards() then
             local num = prey:getHandcardNum() - prey:getMaxCards()
             room:addPlayerMark(prey, "mygo_forced_discard")
-            room:askForDiscard(prey, num, num, false, self.name, false)
+            room:askToDiscard(prey, {num, num, false, self.name, false})
         end
     end
 }
