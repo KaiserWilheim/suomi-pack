@@ -70,4 +70,17 @@ Fk:loadTranslationTable{
 
 -- Rupa
 
+local rupa = General:new(extension, "rupa", "toge", 4, 4, General.Female)
+
+rupa:addSkill("toge_wenrou")
+rupa:addSkill("toge_beishang")
+
+Fk:loadTranslationTable{
+    ["rupa"] = "卢帕",
+    ["#rupa"] = "RUPA",
+    ["illustrator:rupa"] = "",
+    ["cv:rupa"] = "朱李",
+    ["designer:rupa"] = "索米1973",
+}
+
 return extension

@@ -10,4 +10,7 @@ return {
     require(prefix .. "toge_maoxing"),
     require(prefix .. "toge_ciwei"),
     require(prefix .. "toge_fennu"),
+    require(prefix .. "toge_wenrou"),
+    require(prefix .. "toge_wenrou_active"),
+    require(prefix .. "toge_beishang"),
 }
