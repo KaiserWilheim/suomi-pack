@@ -6,4 +6,6 @@ return {
     require(prefix .. "toge_xiaozhi"),
     require(prefix .. "toge_chugan"),
     require(prefix .. "toge_xiyue"),
+    require(prefix .. "toge_yanyuan"),
+    require(prefix .. "toge_maoxing"),
 }

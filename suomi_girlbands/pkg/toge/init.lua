@@ -40,6 +40,19 @@ Fk:loadTranslationTable{
 
 -- Awa Subaru
 
+local subaru = General:new(extension, "awa_subaru", "toge", 4, 4, General.Female)
+
+subaru:addSkill("toge_yanyuan")
+subaru:addSkill("toge_maoxing")
+
+Fk:loadTranslationTable{
+    ["awa_subaru"] = "安和昴",
+    ["#awa_subaru"] = "486",
+    ["illustrator:awa_subaru"] = "",
+    ["cv:awa_subaru"] = "美怜",
+    ["designer:awa_subaru"] = "索米1973",
+}
+
 -- Ebizuka Tomo
 
 -- Rupa
