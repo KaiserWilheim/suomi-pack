@@ -25,6 +25,19 @@ Fk:loadTranslationTable{
 
 -- Kawaragi Momoka
 
+local mmk = General:new(extension, "kawaragi_momoka", "toge", 4, 4, General.Female)
+
+mmk:addSkill("toge_chugan")
+mmk:addSkill("toge_xiyue")
+
+Fk:loadTranslationTable{
+    ["kawaragi_momoka"] = "河原木桃香",
+    ["#kawaragi_momoka"] = "momoka",
+    ["illustrator:kawaragi_momoka"] = "",
+    ["cv:kawaragi_momoka"] = "夕莉",
+    ["designer:kawaragi_momoka"] = "索米1973",
+}
+
 -- Awa Subaru
 
 -- Ebizuka Tomo
