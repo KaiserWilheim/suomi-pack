@@ -55,6 +55,19 @@ Fk:loadTranslationTable{
 
 -- Ebizuka Tomo
 
+local tomo = General:new(extension, "ebizuka_tomo", "toge", 4, 4, General.Female)
+
+tomo:addSkill("toge_ciwei")
+tomo:addSkill("toge_fennu")
+
+Fk:loadTranslationTable{
+    ["ebizuka_tomo"] = "海老冢智",
+    ["#ebizuka_tomo"] = "残月复明",
+    ["illustrator:ebizuka_tomo"] = "",
+    ["cv:ebizuka_tomo"] = "凪都",
+    ["designer:ebizuka_tomo"] = "索米1973",
+}
+
 -- Rupa
 
 return extension

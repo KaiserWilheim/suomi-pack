@@ -8,4 +8,6 @@ return {
     require(prefix .. "toge_xiyue"),
     require(prefix .. "toge_yanyuan"),
     require(prefix .. "toge_maoxing"),
+    require(prefix .. "toge_ciwei"),
+    require(prefix .. "toge_fennu"),
 }
