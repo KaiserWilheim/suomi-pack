@@ -28,22 +28,22 @@ jiaxiao:addEffect(fk.EventPhaseStart, {
         local room = player.room
         local targets = table.filter(room.alive_players, function(p) return p:getMark("@mygo_jiaxiao") == 0 and not p:isKongcheng() end)
         local discussion = U.Discussion(player, targets, self.name)
-        if discussion.color == discussion.results[player.id].opinion then
+        if discussion.color == discussion.results[player].opinion then
             local duelplayer = room:getAlivePlayers()
             local to ={}
             if #duelplayer > 0 then
                 to = room:askToChoosePlayers(player, {
-                    targets = table.map(duelplayer, function (p) return p.id end),
+                    targets = duelplayer,
                     min_num = 2,
                     max_num = 2,
                     prompt = "#mygo_jiaxiao-choose",
                     skill_name = self.name,
-                    cancelable =  false
+                    cancelable = false
                 })
             end
             if not to[1]:prohibitUse(Fk:cloneCard("duel")) then
                 local duel = Fk:cloneCard("duel")
-                local use = {from = to[1], tos = {{to[2]}}, card = duel , extraUse = true}
+                local use = {from = to[1], tos = {to[2]}, card = duel , extraUse = true}
                 room:useCard(use)
             end
         else
