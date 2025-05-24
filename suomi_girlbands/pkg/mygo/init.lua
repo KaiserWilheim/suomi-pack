@@ -9,6 +9,20 @@ extension:loadSkillSkels(require("packages.suomi_girlbands.pkg.mygo.skills"))
 
 -- Takamatsu Tomori
 
+local tomorin = General:new(extension, "takamatsu_tomori", "mygo", 4, 4, General.Female)
+
+tomorin:addSkill("mygo_zhongli")
+tomorin:addSkill("mygo_chaoban")
+tomorin:addSkill("mygo_chunri")
+
+Fk:loadTranslationTable{
+    ["takamatsu_tomori"] = "高松灯",
+    ["#takamatsu_tomori"] = "灯神",
+    ["designer:takamatsu_tomori"] = "索米1973",
+    ["cv:takamatsu_tomori"] = "羊宫妃那",
+    ["illustrator:takamatsu_tomori"] = "",
+}
+
 -- Chihaya Anon
 
 -- Kaname Raana
